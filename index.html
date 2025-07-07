@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniCodePlayground</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="scroll.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#home"><span class="code-icon">&lt;/&gt;</span> MiniCodePlayground</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#code-live" class="nav-item">Code Live</a></li>
+                <li><a href="#team" class="nav-item">Team</a></li>
+                <li><a href="#inspiration" class="nav-item">Inspiration</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Welcome to <span class="highlight">MiniCodePlayground</span></h1>
+                    <p>A lightweight, browser-based coding environment for HTML, CSS, and JavaScript.</p>
+                    <p>Perfect for quick prototyping, learning, and experimenting with web development.</p>
+                    <a href="#code-live" class="btn primary-btn">Try it now</a>
+                </div>
+                <div class="hero-image">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code>&lt;div class="hello"&gt;
+  Hello World!
+&lt;/div&gt;
+
+.hello {
+  color: #4e54c8;
+  font-size: 2rem;
+}
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="code-live" class="section gradient-bg">
+            <div class="container">
+                <h2>Code Live Editor</h2>
+                <p>Experience real-time coding with our interactive editor. Write HTML, CSS, and JavaScript and see the results instantly.</p>
+                <div class="cta-container">
+                    <a href="code_live.html" class="btn secondary-btn">Open Code Editor</a>
+                </div>
+                <div class="preview-image">
+                    <img src="assets/editor-preview.png" alt="Code Editor Preview" onerror="this.src='https://via.placeholder.com/600x400?text=Code+Editor+Preview'">
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="section">
+            <div class="container">
+                <h2>Our Team</h2>
+                <p>Meet the talented individuals behind MiniCodePlayground</p>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="assets/team-member1.jpg" alt="Team Member" onerror="this.src='https://via.placeholder.com/150?text=Team+Member'">
+                        </div>
+                        <h3>Nikhila</h3>
+                        <p class="role">Lead Developer</p>
+                        <p>Passionate about creating tools that make coding accessible to everyone.</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="assets/team-member2.jpg" alt="Team Member" onerror="this.src='https://via.placeholder.com/150?text=Team+Member'">
+                        </div>
+                        <h3>Mahitanjali</h3>
+                        <p class="role">UI/UX Designer</p>
+                        <p>Creates beautiful interfaces that enhance the user experience.</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="assets/team-member3.jpg" alt="Team Member" onerror="this.src='https://via.placeholder.com/150?text=Team+Member'">
+                        </div>
+                        <h3>Thahir</h3>
+                        <p class="role">Frontend Engineer</p>
+                        <p>Transforms design concepts into functional, responsive code.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="inspiration" class="section gradient-bg">
+            <div class="container">
+                <h2>Our Inspiration</h2>
+                <div class="inspiration-content">
+                    <div class="inspiration-text">
+                        <p>MiniCodePlayground was born from our own experiences as students and educators in web development. We wanted to create a lightweight, accessible tool that allows anyone to experiment with code without the need for complex setups.</p>
+                        <p>Our mission is to lower the barriers to entry in programming and make the joy of creating with code available to everyone, regardless of their background or experience level.</p>
+                        <p>This project represents our belief that learning happens best through hands-on experimentation and immediate feedback.</p>
+                    </div>
+                    <div class="inspiration-image">
+                        <div class="quote-box">
+                            <blockquote>
+                                "The best way to learn code is to write code. MiniCodePlayground gives you the freedom to do just that."
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="code-icon">&lt;/&gt;</span> MiniCodePlayground
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#code-live">Code Live</a>
+                    <a href="#team">Team</a>
+                    <a href="#inspiration">Inspiration</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 MiniCodePlayground. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

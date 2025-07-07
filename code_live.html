@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Live Editor - MiniCodePlayground</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="code_editor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="code_runner.js" defer></script>
+</head>
+<body class="editor-page">
+    <header>
+        <nav class="navbar editor-navbar">
+            <div class="logo">
+                <a href="index.html"><span class="code-icon">&lt;/&gt;</span> MiniCodePlayground</a>
+            </div>
+            <div class="editor-controls">
+                <button id="runButton" class="btn primary-btn">
+                    <i class="fas fa-play"></i> Run Code
+                </button>
+                <button id="resetButton" class="btn secondary-btn">
+                    <i class="fas fa-undo"></i> Reset
+                </button>
+                <button id="downloadButton" class="btn download-btn">
+                    <i class="fas fa-download"></i> Download as ZIP
+                </button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="btn outline-btn">
+                    <i class="fas fa-home"></i> Home
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="editor-container">
+        <div class="editor-panel code-panel">
+            <div class="panel-tabs">
+                <button class="tab-button active" data-tab="html-panel">HTML</button>
+                <button class="tab-button" data-tab="css-panel">CSS</button>
+                <button class="tab-button" data-tab="js-panel">JavaScript</button>
+            </div>
+            
+            <div class="editor-sections">
+                <div id="html-panel" class="code-section active">
+                    <div class="editor-header">
+                        <span class="language-label">HTML</span>
+                    </div>
+                    <textarea id="htmlCode" placeholder="Enter your HTML code here..."><!DOCTYPE html>
+<html>
+<head>
+    <title>My Code</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>Welcome to MiniCodePlayground</p>
+    <div class="container">
+        <button id="changeButton">Click Me</button>
+    </div>
+</body>
+</html></textarea>
+                </div>
+                
+                <div id="css-panel" class="code-section">
+                    <div class="editor-header">
+                        <span class="language-label">CSS</span>
+                    </div>
+                    <textarea id="cssCode" placeholder="Enter your CSS code here...">body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    color: #333;
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+}
+
+h1 {
+    color: #4e54c8;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}</textarea>
+                </div>
+                
+                <div id="js-panel" class="code-section">
+                    <div class="editor-header">
+                        <span class="language-label">JavaScript</span>
+                    </div>
+                    <textarea id="jsCode" placeholder="Enter your JavaScript code here...">document.addEventListener('DOMContentLoaded', function() {
+    const button = document.getElementById('changeButton');
+    
+    button.addEventListener('click', function() {
+        const h1 = document.querySelector('h1');
+        h1.style.color = getRandomColor();
+        this.textContent = 'Clicked!';
+    });
+    
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+});</textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="editor-panel preview-panel">
+            <div class="editor-header">
+                <span class="preview-label">Output Preview</span>
+                <button id="refreshButton" class="refresh-btn">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+            <div class="preview-container">
+                <iframe id="previewFrame" title="Code Preview"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer class="editor-footer">
+        <div class="container">
+            <p>&copy; 2025 MiniCodePlayground. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
